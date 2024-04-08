@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: discovery
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+server:
+  port: 8761
+
+#  info:
+#    env:
+#      enabled: true
+#  endpoint:
+#    health:
+#      show-details: ALWAYS
+#      group:
+#        my-health-group:
+#          include: ping, diskSpace
+#  endpoints:
+#    web:
+#      #      base-path: /actuator
+#      #      path-mapping:
+#      #        health: healthcheck
+#      exposure:
+#        include: "*"

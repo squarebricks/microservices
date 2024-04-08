@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: gateway
+  config:
+    import: optional:configserver:http://localhost:8888
+
+info:
+  build-timestamp: @maven.build.timestamp@
+  app:
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
+    java:
+      version: @java.version@
